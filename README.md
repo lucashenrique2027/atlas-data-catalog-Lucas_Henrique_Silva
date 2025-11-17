@@ -98,6 +98,7 @@ docker-compose ps
 ### Lab 1: Cliente Atlas Básico
 ```bash
 cd lab
+pip install -r requirements.txt
 python atlas_client.py
 ```
 **Aprenda**: Conexão com Atlas, busca de entidades, API REST
@@ -105,7 +106,7 @@ python atlas_client.py
 ### Lab 2: Jupyter Notebook Interativo
 ```bash
 # Acessar: http://localhost:8888 (token: tavares1234)
-# Abrir: Lab_Catalogo_Postgres_no_Atlas_Documented_Fixed.ipynb
+# Abrir: Lab_Catalogo_Postgres_no_Atlas.ipynb
 ```
 **Aprenda**: Extração de metadados, catalogação automática, visualização
 
@@ -287,5 +288,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 
 **Para começar, acesse os laboratórios em ordem:**
 1. [Lab Python Básico](lab/LAB_ATLAS_PYTHON.md)
-2. [Exercício Prático](Exercicios/EXERCICIO_ATLAS.md)
+2. [Exercício Prático](Exercicio/EXERCICIO_ATLAS.md)
 3. [Notebook Interativo](notebooks/Lab_Catalogo_Postgres_no_Atlas.ipynb)
