@@ -288,5 +288,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 
 **Para começar, acesse os laboratórios em ordem:**
 1. [Lab Python Básico](lab/LAB_ATLAS_PYTHON.md)
-2. [Exercício Prático](Exercicio/EXERCICIO_ATLAS.md)
+2. [Exercício Prático](Exercicios/EXERCICIO_ATLAS.md)
 3. [Notebook Interativo](notebooks/Lab_Catalogo_Postgres_no_Atlas.ipynb)
