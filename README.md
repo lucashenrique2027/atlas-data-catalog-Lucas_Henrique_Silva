@@ -203,51 +203,59 @@ docker stats
 - Integração com pipelines CI/CD
 - Monitoramento de qualidade de dados
 
-## Troubleshooting
+## Próximos Passos - Roadmap
 
-### Problemas Comuns
+### Evolução para Plataforma DataOps Completa
 
-**Atlas não inicia**
-```bash
-# Verificar memória disponível
-free -h
+Os próximos desenvolvimentos deste repositório incluirão a implementação de uma **plataforma DataOps completa** com orquestração avançada e linhagem automática de dados:
 
-# Aguardar mais tempo (até 10 minutos)
-docker-compose logs -f atlas
+#### **Apache Airflow - Orquestração de ETLs**
+- **Scheduler Avançado**: Orquestração de pipelines de dados complexos
+- **DAGs Automatizados**: Workflows para descoberta e catalogação contínua
+- **Monitoramento**: Interface web para acompanhamento de execuções
+- **Integração Atlas**: DAGs específicos para sincronização de metadados
 
-# Verificar se porta está livre
-netstat -tlnp | grep 21000
-```
+#### **Apache Spark - Engine de Transformação**
+- **Processamento Distribuído**: Transformações em larga escala
+- **Conectores Nativos**: Integração direta com PostgreSQL e Atlas
+- **Spark Streaming**: Processamento de dados em tempo real
+- **Delta Lake**: Versionamento e qualidade de dados
 
-**Erro de conexão PostgreSQL**
-```bash
-# Verificar se container está rodando
-docker-compose ps postgres_erp
+#### **Linhagem Automática de Dados**
+- **Rastreamento Completo**: Origem → Transformação → Destino
+- **Spark Lineage**: Captura automática via Spark Listener
+- **Atlas Integration**: Registro automático de processos ETL
+- **Visualização Gráfica**: Mapeamento visual de fluxos de dados
 
-# Testar conexão direta
-docker exec -it postgres-erp psql -U postgres -l
-```
+### **Arquitetura Futura**
 
-**Jupyter não carrega**
-```bash
-# Verificar logs do container
-docker-compose logs pyspark-aula
+### **Funcionalidades Planejadas**
 
-# Acessar com token correto
-# http://localhost:8888/?token=tavares1234
-```
+| Componente | Funcionalidade | Status |
+|------------|----------------|--------|
+| **Airflow** | DAGs de catalogação automática | Em desenvolvimento |
+| **Spark** | Jobs ETL com linhagem | Em desenvolvimento |
+| **Atlas** | Linhagem automática de processos | Em desenvolvimento |
+| **Monitoring** | Dashboard de qualidade de dados | Planejado |
+| **Governance** | Políticas automatizadas | Planejado |
 
-### Logs e Monitoramento
-```bash
-# Logs em tempo real
-docker-compose logs -f
+### **Benefícios da Evolução**
 
-# Uso de recursos
-docker stats --no-stream
+- **Automação Completa**: Descoberta e catalogação sem intervenção manual
+- **Linhagem End-to-End**: Rastreamento completo do ciclo de vida dos dados
+- **Escalabilidade**: Processamento distribuído para grandes volumes
+- **Governança Avançada**: Políticas e qualidade automatizadas
+- **Observabilidade**: Monitoramento completo de pipelines
 
-# Espaço em disco
-docker system df
-```
+### **Como Contribuir**
+
+Interessado em contribuir com essas funcionalidades? Áreas de desenvolvimento:
+
+- **Airflow DAGs**: Desenvolvimento de workflows de catalogação
+- **Spark Jobs**: Implementação de ETLs com captura de linhagem
+- **Atlas Hooks**: Conectores customizados para diferentes fontes
+- **Monitoring**: Dashboards e alertas de qualidade
+- **Documentation**: Tutoriais e guias avançados
 
 ## Contribuição
 
@@ -259,7 +267,7 @@ Este é um projeto educacional. Contribuições são bem-vindas:
 4. **Push** para a branch
 5. **Abra** um Pull Request
 
-### Áreas de Melhoria
+### Áreas de Melhoria Atuais
 - Novos conectores de dados
 - Exemplos de classificação automática
 - Integração com ferramentas de BI
@@ -278,6 +286,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 - **Jupyter Project** - Pelo ambiente interativo de análise
 
 **Para começar, acesse os laboratórios em ordem:**
-1. [Lab Python Básico](LAB_ATLAS_PYTHON.md)
-2. [Exercício Prático](EXERCICIO_ATLAS.md)
-3. [Notebook Interativo](notebooks/Lab_Catalogo_Postgres_no_Atlas_Documented_Fixed.ipynb)
+1. [Lab Python Básico](lab/LAB_ATLAS_PYTHON.md)
+2. [Exercício Prático](Exercicios/EXERCICIO_ATLAS.md)
+3. [Notebook Interativo](notebooks/Lab_Catalogo_Postgres_no_Atlas.ipynb)
